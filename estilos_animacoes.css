@@ -1,0 +1,122 @@
+* {font-family: 'Noto Sans JP', sans-serif;}
+
+* {box-sizing: border-box; padding: 0; margin: 0;}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: pink;
+    color: black;
+    padding-left: 20px;
+}
+
+nav {
+    overflow: hidden;
+    background-color: pink;
+}
+
+nav a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+nav a:hover, .dropdown:hover .dropbtn {
+    background-color: darksalmon;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: pink;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: darksalmon;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos para as seções */
+section {
+	margin: 50px 0;
+}
+
+/* Estilos para os títulos das seções */
+h2 {
+	margin-bottom: 20px;
+}
+
+/* Estilos para as animações */
+.animacao-1 {
+	background-color: #f00;
+	height: 100px;
+	width: 100px;
+	transition: transform 1s;
+}
+
+.animacao-1:hover {
+	transform: rotate(360deg);
+}
+
+.animacao-2 {
+	background-color: #0f0;
+	height: 100px;
+	width: 100px;
+	transition: transform 1s;
+}
+
+.animacao-2:hover {
+	transform: scale(2);
+}
+
+/* Estilos para as animações com @keyframes */
+@keyframes animacao-3 {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.animacao-3 {
+	background-color: #00f;
+	height: 100px;
+	width: 100px;
+	animation: animacao-3 1s infinite;

@@ -1,0 +1,134 @@
+* {font-family: 'Noto Sans JP', sans-serif;}
+
+* {box-sizing: border-box; padding: 0; margin: 0;}
+
+div.parallax {
+    margin: 30px;
+    border: 3px solid black;
+}
+
+@media only screen and (min-width:601px) {
+  .parallax {
+        background-image: url("images/street.jpg");
+        min-height: 400px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width:600px) {
+  .parallax {
+        background-image: url("images/street_night.jpg");
+        min-height: 400px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media only screen and (min-width:601px) {
+  .parallax2 {
+      background-image: url("images/anime-mashup.jpg");
+      min-height: 400px; 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+}
+
+@media only screen and (max-width:601px) {
+  .parallax2 {
+      background-image: url("images/anime-mashup-mobile.png");
+      min-height: 400px; 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+}
+
+body {
+    background-color: aquamarine;
+}
+
+p {
+    margin: 30px;
+    font-size: large;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding-left: 20px;
+}
+
+nav {
+    overflow: hidden;
+    background-color: aquamarine;
+}
+
+nav a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+nav a:hover, .dropdown:hover .dropbtn {
+    background-color: mediumaquamarine;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: aquamarine;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 5px 5px;
+}
