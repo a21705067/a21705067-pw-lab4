@@ -1,19 +1,19 @@
 * {font-family: 'Noto Sans JP', sans-serif;}
 
-* {box-sizing: border-box; padding: 0; margin: 0;}
+* {box-sizing: border-box; padding: 0; margin: 0; }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: pink;
+    background-color: aquamarine;
     color: black;
     padding-left: 20px;
 }
 
 nav {
     overflow: hidden;
-    background-color: pink;
+    background-color: aquamarine;
 }
 
 nav a {
@@ -42,13 +42,13 @@ nav a {
 }
 
 nav a:hover, .dropdown:hover .dropbtn {
-    background-color: darksalmon;
+    background-color: lavender;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: pink;
+    background-color: aquamarine;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -64,59 +64,194 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 .dropdown-content a:hover {
-    background-color: darksalmon;
+    background-color: lavender;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Estilos para as seções */
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 20px;
+}
+
+
 section {
-	margin: 50px 0;
+	margin: 50px 50px;
+    width: auto;
+    position: relative;
+    border-radius: 10px;
 }
 
-/* Estilos para os títulos das seções */
 h2 {
+    padding-left: 10px;
 	margin-bottom: 20px;
+    background-color: aquamarine;
+    width: auto;
 }
 
-/* Estilos para as animações */
+
 .animacao-1 {
-	background-color: #f00;
-	height: 100px;
-	width: 100px;
-	transition: transform 1s;
+    margin-top: 20px;
+    background-image: url(images/tartaruga.jpeg);
+	transition: transform 5s;
+    width: 100px;
+    height: 100px;
 }
 
 .animacao-1:hover {
 	transform: rotate(360deg);
+    width: 100px;
+    height: 100px;
 }
 
 .animacao-2 {
-	background-color: #0f0;
-	height: 100px;
-	width: 100px;
-	transition: transform 1s;
+    margin-top: 20px;
+    background-image: url(images/crystallb.jpeg);
+	transition: transform 5s;
+    width: 100px;
+    height: 100px;
 }
 
 .animacao-2:hover {
-	transform: scale(2);
+	transform: scale(1.5);
 }
 
-/* Estilos para as animações com @keyframes */
-@keyframes animacao-3 {
-	0% {
-		transform: rotate(0deg);
-	}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
 
-	100% {
-		transform: rotate(360deg);
-	}
+    to {
+        opacity: 1;
+    }
 }
 
 .animacao-3 {
-	background-color: #00f;
+    margin-top: 20px;
 	height: 100px;
 	width: 100px;
-	animation: animacao-3 1s infinite;
+	background-image: url(images/caps.jpeg);
+	animation: fadein 3.5s ease-in-out;
+}
+
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.animacao-4 {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    background-image: url(images/nuvem_magica.jpeg);
+    animation: slidein 2s ease-in-out;
+}
+
+@keyframes ef-1 {
+    0% {left:0px; top:0px;}
+    25% {background-image: url(images/vegeta.jpeg); left:200px; top:0px;}
+    50% {background-image: url(images/cell.jpeg); left:200px; top:200px;}
+    75% {background-image: url(images/freezer.jpeg); left:0px; top:200px;}
+    100% {background-image: url(images/bubu.jpeg); left:0px; top:0px;}
+
+}
+
+.efeito-1 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation-name: ef-1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ef-2 {
+    0% {
+        left: 0;
+        background-image: url('images/goku.png');
+    }
+    50% {
+        left: 60%;
+        background-image: url('images/super_sayan.jpeg');
+    }
+    100% {
+        left: 0;    
+        background-image: url('images/super_sayan1.jpeg');
+    }
+}
+
+.efeito-2 {
+    margin-left: 300px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation-name: ef-2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}  
+
+
+.poema {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+  
+.quadra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.verso {
+    font-size: 20px;
+    color: #333;
+   transition: all 0.5s ease-in-out;
+ }
+  
+.verso:hover {
+    color: #f00;
+    transform: scale(1.1) rotate(5deg);
+}
+  
+.quadra:first-of-type .verso:first-of-type {
+    font-size: 30px;
+    font-weight: bold;
+}
+  
+.quadra:last-of-type .verso:last-of-type {
+    font-style: italic;
+}
+  
+.quadra:nth-of-type(2) .verso:nth-child(2) {
+    color: #00f;
+}
+  
+@media (max-width: 600px) {
+    .verso {
+      font-size: 16px;
+    }
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 5px 5px;
+    background-color: aquamarine;
+}
